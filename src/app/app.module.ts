@@ -11,6 +11,10 @@ import { BannerComponent } from './components/banner/banner.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProductsPageComponent } from './pages/products-page/products-page.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { Page404Component } from './pages/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { FooterComponent } from './components/footer/footer.component';
     BannerComponent,
     ProductListComponent,
     ProductCartComponent,
-    FooterComponent
+    FooterComponent,
+    HomePageComponent,
+    ProductsPageComponent,
+    ProductPageComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule
