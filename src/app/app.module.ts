@@ -15,6 +15,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { Page404Component } from './pages/page404/page404.component';
+import { RoutingModule } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { Page404Component } from './pages/page404/page404.component';
     Page404Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
