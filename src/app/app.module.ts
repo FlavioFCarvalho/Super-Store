@@ -16,6 +16,7 @@ import { ProductsPageComponent } from './pages/products-page/products-page.compo
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { RoutingModule } from './app.routes';
+import { MenuService } from './providers/menu.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { RoutingModule } from './app.routes';
     BrowserModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
