@@ -17,6 +17,7 @@ import { ProductPageComponent } from './pages/product-page/product-page.componen
 import { Page404Component } from './pages/page404/page404.component';
 import { RoutingModule } from './app.routes';
 import { MenuService } from './providers/menu.service';
+import { ProductsService } from './providers/products.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { MenuService } from './providers/menu.service';
     BrowserModule,
     RoutingModule
   ],
-  providers: [MenuService],
+  providers: [MenuService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
