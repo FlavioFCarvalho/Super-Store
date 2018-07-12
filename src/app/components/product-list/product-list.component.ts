@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../providers/products.service';
 
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -8,12 +9,16 @@ import { ProductsService } from '../../providers/products.service';
 })
 export class ProductListComponent implements OnInit {
 
+  loading = true;
   items: any[];
   constructor(public products: ProductsService) { }
 
   ngOnInit() {
     this.products.list().then((products: any[]) => {
-      this.items = products;
+      setTimeout(() => {
+        this.items = products;
+        this.loading = false;
+      }, 1 * 1000); // 1 second delay
     });
   }
 
