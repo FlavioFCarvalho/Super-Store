@@ -9,7 +9,6 @@ import { SeachbarComponent } from './components/seachbar/seachbar.component';
 import { CartbarComponent } from './components/cartbar/cartbar.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
@@ -18,6 +17,9 @@ import { Page404Component } from './pages/page404/page404.component';
 import { RoutingModule } from './app.routes';
 import { MenuService } from './providers/menu.service';
 import { ProductsService } from './providers/products.service';
+import { CartService } from './providers/cart.service';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { StorageService } from './providers/storage.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { ProductsService } from './providers/products.service';
     CartbarComponent,
     BannerComponent,
     ProductListComponent,
-    ProductCartComponent,
+    ProductCardComponent,
     FooterComponent,
     HomePageComponent,
     ProductsPageComponent,
@@ -40,7 +42,8 @@ import { ProductsService } from './providers/products.service';
     BrowserModule,
     RoutingModule
   ],
-  providers: [MenuService, ProductsService],
+
+  providers: [MenuService, ProductsService, StorageService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

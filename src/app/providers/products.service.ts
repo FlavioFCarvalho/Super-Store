@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 const products = require('./products.json');
 let BASEURL = window.location.href;
-BASEURL = BASEURL.substring(0, BASEURL.length-1);
+BASEURL = BASEURL.substring(0, BASEURL.length - 1);
 
 import * as  _ from 'lodash';
 import * as  $ from 'jquery';
