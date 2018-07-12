@@ -11,7 +11,7 @@
 
     <div class="is-desktop is-multiline">
       <p *ngFor="let product of items; let i = index">
-        {{product.name}}
+        {{product | json}}
       </p>
      <!-- <app-product-card [ngClass]="{'is-half':i==0||i%11==0, 'is-one-quarter':i>0&&i%11!=0}" class="column" *ngFor="let product of items; let i = index" [product]="product"></app-product-card>
      -->
